@@ -5,12 +5,9 @@ const bodyParser = require('body-parser');
 const mysql = require('mysql2');
 const app = express();
 
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'sqltest14',
-  database: 'bdmynegocio'
-});
+const connection = mysql.createConnection(
+  'mysql://avnadmin:AVNS_sB-amvkES18PkwVlL_v@mysql-1c5d2357-bdnegocios.e.aivencloud.com:22359/bdmynegocio'
+);
 
 connection.connect(err => {
   if (err) {
